@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NutriLife - Daily Health Tips</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      color: #2e8b57;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    button {
+      background-color: #2e8b57;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+
+    button:hover {
+      background-color: #1e6b43;
+    }
+
+    #tipBox {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Welcome to NutriLife</h1>
+  <p>Your simple daily health tip app!</p>
+
+  <button onclick="showTip()">Show Today's Tip</button>
+
+  <div id="tipBox">
+    <p id="tipText"></p>
+  </div>
+
+  <script>
+    // Variables and operators
+    let waterDrank = 9;
+    let goal = 8;
+    let remaining = goal - waterDrank;
+
+    // Function using control statement and outputs
+    function showTip() {
+      let tipMessage;
+
+      if (waterDrank < goal) {
+        tipMessage = "You have had " + waterDrank + " glasses of water. Try to drink " + remaining + " more!";
+      } else {
+        tipMessage = "Great! You met your water goal today!";
+      }
+
+      // Showing in HTML
+      document.getElementById("tipText").innerHTML = tipMessage;
+      document.getElementById("tipBox").style.display = "block";
+
+      // Alert message
+      alert("Tip shown! Keep it up!");
+
+      // Console log for debugging
+      console.log("Tip displayed: " + tipMessage);
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,136 @@
+/* Reset and base styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* Global container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header styling */
+.header {
+  background-color: #136910;
+  padding: 20px 0;
+  color: white;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  float: left;
+}
+
+.navbar {
+  float: right;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Clear float */
+.header::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* Sections */
+.section {
+  padding: 60px 0;
+}
+
+.center-text {
+  text-align: center;
+}
+
+/* Product grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+.product-box {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.product-box img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.product-box h3 {
+  padding: 15px;
+  font-size: 18px;
+  color: #333;
+}
+.product-box a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 40px 0;
+}
+
+.footer-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-right {
+  width: 45%;
+}
+
+.footer a {
+  color: #7fffd4;
+  text-decoration: none;
+}
+
+/* Button area */
+.btn-area {
+  margin-top: 30px;
+}
+
+.btn-area button {
+  padding: 10px 15px;
+  margin: 8px;
+  border: none;
+  background-color: #136910;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn-area button:hover {
+  background-color: #0a4f0c;
+}
